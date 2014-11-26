@@ -12,7 +12,9 @@ gulp.task('jshtml', function() {
 	return gulp.src('src/**/*.html', {
             base: './'
         })
-        .pipe(jshtml())        
+        .pipe(jshtml({
+        	varname:"templates"
+        }))        
         .pipe(gulp.dest('dist/'))		
 });
 ```
@@ -20,4 +22,4 @@ gulp.task('jshtml', function() {
 
 Options
 ---
-`varname` = Namespace for HTML files to be added to, defaults to `jshtml[]`
+`varname` (Optional) Namespace for HTML files to be added to, defaults to `jshtml[]`, e.g. the content of `C:\MyPath\MyDirectory\MyFile.html` is set to `jshtml[MyFile]`
