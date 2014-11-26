@@ -4,7 +4,7 @@ gulp-jshtml
 Gulp plugin to convert passed HTML streams to Javascript
 
 
-Use
+Usage
 ---
 ```javascript
 jshtml = require('gulp-jshtml'),
@@ -16,3 +16,8 @@ gulp.task('jshtml', function() {
         .pipe(gulp.dest('dist/'))		
 });
 ```
+
+
+Options
+---
+`varname` = Namespace for HTML files to be added to, defaults to `jshtml[]`
