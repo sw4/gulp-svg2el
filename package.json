@@ -2,8 +2,8 @@
   "name": "gulp-jshtml",
   "description": "Convert HTML to Javascript",
   "version": "0.0.1",
-  "homepage": "http://github.com/sw4/jshtml",
-  "repository": "git://github.com/sw4/jshtml.git",
+  "homepage": "http://github.com/sw4/gulp-jshtml",
+  "repository": "git://github.com/sw4/gulp-jshtml.git",
   "author": "SW4",
   "main": "./index.js",
   "keywords": [
@@ -25,7 +25,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/sw4/jshtml/raw/master/LICENSE-MIT.md"
+      "url": "http://github.com/sw4/gulp-jshtml/raw/master/LICENSE-MIT.md"
     }
   ]
 }
