@@ -36,8 +36,9 @@ function gulpJshtml(options) {
         if (file.isBuffer()) {            
 			var key = path.basename(file.path).replace('.html', '').replace('.htm', ''),
 				varname=options && options.varname ? options.varname : 'jshtml';
-				compiled=varname+"= "+varname+" ? "+varname+" : [];"
-			compiled+="\n"+varname+"['"+key+"']=\""+String(file.contents).replace(/([^"\\]*(?:\\.[^"\\]*)*)"/g, "$1\\\"").replace(/\r?\n|\r/g, "").replace(/\t/g, '').replace(/\s{2,}/g, ' ').trim()+"\";\n";
+				compiled=varname+"= "+varname+" ? "+varname+" : [];";
+				key=key.indexOf(".")<0 ? key : key.substr(0,key.indexOf("."));
+			compiled+=varname+"['"+key+"']=\""+String(file.contents).replace(/([^"\\]*(?:\\.[^"\\]*)*)"/g, "$1\\\"").replace(/\r?\n|\r/g, "").replace(/\t/g, '').replace(/\s{2,}/g, ' ').trim()+"\";";
             file.contents = new Buffer(compiled);  
             this.push(file);
             return callback();
