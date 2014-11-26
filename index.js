@@ -16,6 +16,7 @@ function gulpJshtml(options) {
         }
         // User's should be using a compatible glob with plugin.
         // Example: gulp.src('dir/**/*.{html,htm}').pipe(jshtml())
+		/*
         if (['.html', '.htm'].indexOf(path.extname(file.path)) === -1) {
             this.emit('error', new PluginError({
                 plugin: 'JSHTML',
@@ -23,6 +24,7 @@ function gulpJshtml(options) {
             }));
             return callback();
         }
+		*/
         // No support for streams
         if (file.isStream()) {
             this.emit('error', new PluginError({
