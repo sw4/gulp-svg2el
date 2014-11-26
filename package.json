@@ -9,7 +9,7 @@
   "keywords": [
     "gulpplugin"
   ],
-  "dependencies": {,
+  "dependencies": {
     "gulp-util": "^3.0.1",
     "through2": "^0.6.3"
   },
