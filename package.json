@@ -1,0 +1,31 @@
+{
+  "name": "gulp-jshtml",
+  "description": "Convert HTML to Javascript",
+  "version": "0.0.1",
+  "homepage": "http://github.com/sw4/jshtml",
+  "repository": "git://github.com/sw4/jshtml.git",
+  "author": "SW4",
+  "main": "./index.js",
+  "keywords": [
+    "gulpplugin"
+  ],
+  "dependencies": {
+    "gulp-util": "^2.2.5",
+    "through2": "^2.3.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-util": "^2.2.5",
+    "through2": "^2.3.4"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/sw4/jshtml/raw/master/LICENSE-MIT.md"
+    }
+  ]
+}
