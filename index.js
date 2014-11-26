@@ -32,7 +32,11 @@ function gulpJshtml(options) {
             return callback();
         }
         if (file.isBuffer()) {            
-            file.contents = new Buffer(String(file.contents).replace(/([^"\\]*(?:\\.[^"\\]*)*)"/g, "$1\\\"").replace(/\r?\n|\r/g, "").replace(/\t/g, '').replace(/\s{2,}/g, ' ').trim());  
+			var key = path.basename(file.path).replace('.html', '').replace('.htm', ''),
+				varname=options && options.varname ? options.varname : 'jshtml';
+				compiled=varname+"= "+varname+" ? "+varname+" : [];"
+			compiled+="\n"+varname+"['"+key+"']=\""+String(file.contents).replace(/([^"\\]*(?:\\.[^"\\]*)*)"/g, "$1\\\"").replace(/\r?\n|\r/g, "").replace(/\t/g, '').replace(/\s{2,}/g, ' ').trim()+"\";\n";
+            file.contents = new Buffer(compiled);  
             this.push(file);
             return callback();
         }else{
@@ -43,6 +47,7 @@ function gulpJshtml(options) {
             return callback();		
 		}
     });
+	
 };
 // exporting the plugin main function
 module.exports = gulpJshtml;
