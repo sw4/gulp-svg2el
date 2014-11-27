@@ -22,11 +22,13 @@ gulp.task('jshtml', function() {
 
 Options
 ---
-`invoke` (Optional) Function to invoke, passed compiled HMTL and template location. Defaults to `jshtml`. e.g. the content of `C:\MyPath\MyDirectory\MyFile.html` is passed to `jshtml(compiledHTML, 'C:\MyPath\MyDirectory\MyFile.html')`
+`invoke` 
+
+(Optional) Function to invoke, passed compiled HMTL and template location. Defaults to `jshtml`. e.g. the content of `C:\MyPath\MyDirectory\MyFile.html` is passed to `jshtml(compiledHTML, 'C:\MyPath\MyDirectory\MyFile.html')`
 
 #####Example
 
-######Gulp task
+######Gulp
 
 ```javascript
 
@@ -43,7 +45,7 @@ gulp.src('myDirectory\myFile.html', {
        Some content here...can be {anything}	   
 </div>
 ```
-######Ouput JS
+######Output JS
 ```javascript
 templates.push("<div id='myDiv' class='myDiv-css'>Some content here...can be {anything}</div>", "myDirectory\myFile.html");
 ```
