@@ -39,7 +39,9 @@ gulp.src('myDirectory\myFile.html', {
 HTML, of `myDirectory\myFile.html`
 
 ```html
-<div id='myDiv' class='myDiv-css'>Some content here...can be {anything}</div>
+<div id='myDiv' class='myDiv-css'>
+       Some content here...can be {anything}	   
+</div>
 ```
 Ouput JS
 ```javascript
