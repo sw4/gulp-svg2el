@@ -19,6 +19,9 @@ gulp.task('jshtml', function() {
 });
 ```
 
+####Considerations
+
+The plugin escapes all relevant characters in the source HTML, collapses tabs / whitespace into a single space and trims the result.
 
 ####Options
 `invoke` 
