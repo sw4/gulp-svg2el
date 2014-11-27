@@ -20,13 +20,12 @@ gulp.task('jshtml', function() {
 ```
 
 
-Options
----
+####Options
 `invoke` 
 
 (Optional) Function to invoke, passed compiled HMTL and template location. Defaults to `jshtml`. e.g. the content of `C:\MyPath\MyDirectory\MyFile.html` is passed to `jshtml(compiledHTML, 'C:\MyPath\MyDirectory\MyFile.html')`
 
-#####Example
+####Example
 
 ######Gulp
 
