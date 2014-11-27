@@ -19,6 +19,7 @@ gulp.task('build:js', function() {
             base: './'
         })
         .pipe(plugins.plumber())
+		.pipe(plugins.jsbeautifier())
         .pipe(plugins.jshint())
         .pipe(plugins.jshint.reporter('jshint-stylish'))
         .pipe(plugins.header(banner, {
@@ -28,14 +29,8 @@ gulp.task('build:js', function() {
 });
 
 gulp.task('watch', ['browser-sync'], function() {
-    gulp.watch('index.js', ['beautify', 'build:js','bump']);
+    gulp.watch('index.js', ['build','bump']);
     return true;
-});
-gulp.task('beautify', function(){
-  return gulp.src('index.js', {base: './'})
-	.pipe(plugins.plumber())
-	.pipe(plugins.jsbeautifier())
-	.pipe(gulp.dest('./'));
 });
 
 gulp.task('bump', function() {
