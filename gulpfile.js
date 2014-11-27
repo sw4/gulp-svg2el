@@ -42,4 +42,4 @@ gulp.task('bump', function() {
         .pipe(gulp.dest('./'));
 });
 gulp.task('default', ['watch']);
-gulp.task('travis', ['build:styles', 'build:js']);
+gulp.task('travis', ['build']);
