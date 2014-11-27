@@ -30,8 +30,8 @@ Gulp task
 
 ```javascript
 .pipe(jshtml({
-        	invoke:"templates.push"
-	}))  
+    invoke:"templates.push"
+}))  
 ```
 
 HTML, located at `myDirectory\myFile.html`
