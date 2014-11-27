@@ -1,6 +1,6 @@
 gulp-jshtml
 ======
- 
+
 [![Build Status](https://img.shields.io/travis/sw4/gulp-jshtml.svg?style=flat-square)](https://travis-ci.org/sw4/gulp-jshtml)
 [![Dependency Status](https://img.shields.io/david/sw4/gulp-jshtml.svg?style=flat-square)](https://david-dm.org/sw4/gulp-jshtml)
 [![devDependency Status](https://img.shields.io/david/dev/sw4/gulp-jshtml.svg?style=flat-square)](https://david-dm.org/sw4/gulp-jshtml#info=devDependencies)
