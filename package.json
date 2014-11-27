@@ -1,13 +1,13 @@
 {
-  "name": "gulp-jshtml",
+  "name": "gulp-jshtml", 
   "description": "Convert HTML to Javascript",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "homepage": "http://github.com/sw4/gulp-jshtml",
   "repository": "git://github.com/sw4/gulp-jshtml.git",
   "author": "SW4",
   "main": "./index.js",
   "keywords": [
-    "gulpplugin","html", "javascript", "templating"
+    "gulpplugin","html", "javascript", "templating", "gulp", "plugin", "template"
   ],
   "dependencies": {
     "gulp-util": "^3.0.1",
