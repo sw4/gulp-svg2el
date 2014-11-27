@@ -13,7 +13,7 @@ gulp.task('jshtml', function() {
             base: './'
         })
         .pipe(jshtml({
-        	varname:"templates"
+        	invoke:"templates"
         }))        
         .pipe(gulp.dest('dist/'))		
 });
