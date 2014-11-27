@@ -14,7 +14,7 @@ var gulp = require('gulp'),
         ''
     ].join('\n');
 
-gulp.task('build:js', function() {
+gulp.task('build', function() {
     return gulp.src('index.js', {
             base: './'
         })
