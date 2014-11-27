@@ -1,6 +1,7 @@
 gulp-jshtml
 ======
 
+[![Dependency Status](https://img.shields.io/david/sw4/gulp-jshtml.svg?style=flat-square)](https://david-dm.org/sw4/gulp-jshtml)
 [![devDependency Status](https://img.shields.io/david/dev/sw4/gulp-jshtml.svg?style=flat-square)](https://david-dm.org/sw4/gulp-jshtml#info=devDependencies)
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](https://github.com/sw4/gulp-jshtml/blob/master/LICENSE-MIT.md)
 [![Issues](https://img.shields.io/github/issues/sw4/gulp-jshtml.svg?style=flat-square)](https://github.com/sw4/gulp-jshtml/issues)
