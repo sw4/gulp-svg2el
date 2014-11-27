@@ -20,11 +20,9 @@ Usage
 ```javascript
 jshtml = require('gulp-jshtml'),
 gulp.task('jshtml', function() {
-	return gulp.src('src/**/*.html', {
-            base: './'
-        })
+	return gulp.src('src/**/*.html')
         .pipe(jshtml({
-        	invoke:"templates"
+        	invoke:"templates.add"
         }))        
         .pipe(gulp.dest('dist/'))		
 });
@@ -47,7 +45,7 @@ The plugin escapes all relevant characters in the source HTML, collapses tabs / 
 
 gulp.src('myDirectory\myFile.html', {
   .pipe(jshtml({
-      invoke:"templates.push"
+      invoke:"templates.add"
   }))  
 ```
 
@@ -55,10 +53,10 @@ gulp.src('myDirectory\myFile.html', {
 
 ```html
 <div id='myDiv' class='myDiv-css'>
-       Some content here...can be {anything}	   
+       Some content "here"...can be {anything}	   
 </div>
 ```
 ######Output JS
 ```javascript
-templates.push("<div id='myDiv' class='myDiv-css'>Some content here...can be {anything}</div>", "myDirectory\myFile.html");
+templates.add("<div id='myDiv' class='myDiv-css'>Some content \"here\"...can be {anything}</div>", "myDirectory\myFile.html");
 ```
