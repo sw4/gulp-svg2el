@@ -29,12 +29,14 @@ Example
 Gulp task
 
 ```javascript
-.pipe(jshtml({
-    invoke:"templates.push"
-}))  
+
+gulp.src('myDirectory\myFile.html', {
+  .pipe(jshtml({
+      invoke:"templates.push"
+  }))  
 ```
 
-HTML, located at `myDirectory\myFile.html`
+HTML, of `myDirectory\myFile.html`
 
 ```html
 <div id='myDiv' class='myDiv-css'>Some content here...can be {anything}</div>
