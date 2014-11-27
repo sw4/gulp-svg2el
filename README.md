@@ -24,9 +24,9 @@ Options
 ---
 `invoke` (Optional) Function to invoke, passed compiled HMTL and template location. Defaults to `jshtml`. e.g. the content of `C:\MyPath\MyDirectory\MyFile.html` is passed to `jshtml(compiledHTML, 'C:\MyPath\MyDirectory\MyFile.html')`
 
-Example
+######Example
 
-Gulp task
+#####Gulp task
 
 ```javascript
 
@@ -36,14 +36,14 @@ gulp.src('myDirectory\myFile.html', {
   }))  
 ```
 
-HTML, of `myDirectory\myFile.html`
+#####HTML, of `myDirectory\myFile.html`
 
 ```html
 <div id='myDiv' class='myDiv-css'>
        Some content here...can be {anything}	   
 </div>
 ```
-Ouput JS
+#####Ouput JS
 ```javascript
 templates.push("<div id='myDiv' class='myDiv-css'>Some content here...can be {anything}</div>", "myDirectory\myFile.html");
 ```
