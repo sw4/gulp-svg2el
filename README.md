@@ -61,12 +61,15 @@ gulp.src('myDirectory\myFile.html', {
 templates.add("<div id='myDiv' class='myDiv-css'>Some content \"here\"...can be {anything}</div>", "myDirectory\myFile.html");
 ```
 
-
+-----------------------------------------
 
 ####Sample Use Case
 
+The compiled index.html file when viewed will show a random number between 0-1
 
 ######index.html (viewed by the end user):
+Includes references to `main.js` and `templates.js`
+
 
 ```html
 <div id='example'></div>
@@ -74,7 +77,7 @@ templates.add("<div id='myDiv' class='myDiv-css'>Some content \"here\"...can be 
 
 ######main.js:
 
-Creates a central template store, and defines a method to add new templates to it- which is used in `templates.js` output by `gulp-jshtml`.
+Creates a central template store, and defines a method to add new templates to it. This method is used by `templates.js` having been defined in the `gulp-jshtml` task.
 
 ```javascript
 var templates={};
@@ -107,10 +110,6 @@ For each template, calls the `templates.add` method, passing the template HTML a
 ```javascript
 templates.add("<span>{{randomNumber}}</span>", "template.html");
 ```
-
-
-
-
 
 
 
