@@ -85,7 +85,7 @@ templates.add=function(html, location){
 	location = location.substr(0,location.indexOf("."));
 	templates[location]=html;
 }
-document.getElementById('example').innerHTML=templates.template.replace("{{randomNumber"}}, Math.random());
+document.getElementById('example').innerHTML=templates.template.replace("{{randomNumber}}", Math.random());
 ```
 
 ######template.html
