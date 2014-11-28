@@ -14,6 +14,7 @@ gulp-jshtml
 
 Gulp plugin to convert passed HTML streams to Javascript
 
+`$ npm install gulp-jshtml`
 
 Usage
 ---
