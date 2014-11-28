@@ -113,6 +113,11 @@ templates.add("<span>{{randomNumber}}</span>", "template.html");
 ```
 
 
+-----------------------------------------
+
+####In the wild
+
+This plugin is used by the (OpenUI project)[https://github.com/open-ui/open-ui]
 
 
 
