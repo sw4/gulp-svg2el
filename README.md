@@ -115,9 +115,7 @@ templates.add("<span>{{randomNumber}}</span>", "template.html");
 
 -----------------------------------------
 
-####In the wild
-
-This plugin is used by the [OpenUI project](https://github.com/open-ui/open-ui)
+<sup>gulp-jshtml, written by [SW4](https://github.com/sw4) for use in the [OpenUI](https://github.com/open-ui/open-ui) project, www.ouijs.org.</sup>
 
 
 
