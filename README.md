@@ -10,7 +10,7 @@ gulp-jshtml
 
 
 [![Status](https://badge.fury.io/gh/sw4%2Fgulp-jshtml.png)]()
-[![NPM](https://badge.fury.io/js/gulp-jshtml.png)]()
+[![NPM](https://badge.fury.io/js/gulp-jshtml.png)](https://www.npmjs.org/)
 
 Gulp plugin to convert passed HTML streams to Javascript
 
