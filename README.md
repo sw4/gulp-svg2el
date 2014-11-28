@@ -115,7 +115,7 @@ templates.add("<span>{{randomNumber}}</span>", "template.html");
 
 -----------------------------------------
 
-<sup>gulp-jshtml, written by [SW4](https://github.com/sw4) for use in the [OpenUI](https://github.com/open-ui/open-ui) project, www.ouijs.org.</sup>
+<sup>[gulp-jshtml](https://github.com/sw4/gulp-jshtml), written by [SW4](https://github.com/sw4) for use in the [OpenUI](https://github.com/open-ui/open-ui) project, www.ouijs.org.</sup>
 
 
 
