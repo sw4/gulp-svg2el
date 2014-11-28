@@ -7,9 +7,7 @@ gulp-jshtml
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](https://github.com/sw4/gulp-jshtml/blob/master/LICENSE-MIT.md)
 [![Issues](https://img.shields.io/github/issues/sw4/gulp-jshtml.svg?style=flat-square)](https://github.com/sw4/gulp-jshtml/issues)
 [![Release](https://img.shields.io/github/release/sw4/gulp-jshtml.svg?style=flat-square)](https://github.com/sw4/gulp-jshtml/releases)
-
-
-[![Status](https://badge.fury.io/gh/sw4%2Fgulp-jshtml.png)]()
+[![Status](https://badge.fury.io/gh/sw4%2Fgulp-jshtml.png)](https://github.com/sw4/gulp-jshtml)
 [![NPM](https://badge.fury.io/js/gulp-jshtml.png)](https://www.npmjs.org/package/gulp-jshtml)
 
 Gulp plugin to convert passed HTML streams to Javascript
