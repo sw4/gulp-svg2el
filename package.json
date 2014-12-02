@@ -1,13 +1,19 @@
 {
-  "name": "gulp-jshtml", 
+  "name": "gulp-jshtml",
   "description": "Convert HTML to Javascript",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "homepage": "http://github.com/sw4/gulp-jshtml",
   "repository": "git://github.com/sw4/gulp-jshtml.git",
   "author": "SW4",
   "main": "./index.js",
   "keywords": [
-    "gulpplugin","html", "javascript", "templating", "gulp", "plugin", "template"
+    "gulpplugin",
+    "html",
+    "javascript",
+    "templating",
+    "gulp",
+    "plugin",
+    "template"
   ],
   "dependencies": {
     "gulp": "^3.8.7",
@@ -24,7 +30,7 @@
     "gulp-jshint": "^1.8.6",
     "gulp-load-plugins": "^0.7.0",
     "gulp-plumber": "^0.6.6",
-    "jshint-stylish": "^1.0.0"	
+    "jshint-stylish": "^1.0.0"
   },
   "engineStrict": true,
   "engines": {
