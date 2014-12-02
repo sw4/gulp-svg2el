@@ -1,8 +1,8 @@
 /**
  * gulp-jshtml
- * @version v0.0.9
+ * @version v0.0.11
  * @link http://github.com/sw4/gulp-jshtml
- * @copyright (c)2014 
+ * @copyright (c)2014
  * @license MIT (http://github.com/sw4/gulp-jshtml/raw/master/LICENSE-MIT.md)
  */
 var through = require('through2'),
@@ -12,18 +12,7 @@ var through = require('through2'),
 const PLUGIN_NAME = 'gulp-jshtml';
 
 function gulpJshtml(options) {
-    function escape(s) {
-        return ('' + s) /* Forces the conversion to string. */
-            .replace(/\\/g, '\\\\') /* This MUST be the 1st replacement. */
-            .replace(/\t/g, '\\t') /* These 2 replacements protect whitespaces. */
-            .replace(/\n/g, '\\n')
-            .replace(/\u00A0/g, '\\u00A0') /* Useful but not absolutely necessary. */
-            .replace(/&/g, '\\x26') /* These 5 replacements protect from HTML/XML. */
-            .replace(/'/g, '\\x27')
-            .replace(/"/g, '\\x22')
-            .replace(/</g, '\\x3C')
-            .replace(/>/g, '\\x3E');
-    }
+    options = options || {};
     return through.obj(function(file, enc, callback) {
         if (file.isNull() || file.isDirectory()) {
             this.push(file);
@@ -38,10 +27,10 @@ function gulpJshtml(options) {
         }
         options.invoke = options.invoke || 'jshtml';
         if (file.isBuffer()) {
-
-            var location = escape(file.path),
-                compiled = "\"" + escape(String(file.contents).replace(/\r?\n|\r/g, "").replace(/\t/g, '').replace(/\s{2,}/g, ' ').trim()) + "\"";
-            compiled = options.invoke + "(" + compiled + ", \"" + location + "\");";
+            var stream = String(file.contents),
+                location = "'" + file.path.replace(/\\/g, "/") + "'",
+                compiled = stream.replace(/(?:\r\n|\r|\n)/g, '').replace(/[\\']/g, "\"").replace(/[\\"']/g, '\\$&').replace(/\t/g, '').replace(/\s{2,}/g, ' ').trim();
+            compiled = options.invoke + "(" + location + ", \'" + compiled + "\');";
             file.contents = new Buffer(compiled);
             this.push(file);
             console.log(location + " COMPILED");
