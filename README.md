@@ -34,7 +34,7 @@ The plugin escapes all relevant characters in the source HTML, collapses tabs / 
 ####Options
 `invoke` 
 
-(Optional) Function to invoke, passed compiled HMTL and template location. Defaults to `jshtml`. e.g. the content of `C:\MyPath\MyDirectory\MyFile.html` is passed to `jshtml('C:\MyPath\MyDirectory\MyFile.html', compiledHTML)`
+(Optional) Function to invoke, passed template location and compiled HTML. Defaults to `jshtml`. e.g. the content of `C:\MyPath\MyDirectory\MyFile.html` is passed to `jshtml('C:\MyPath\MyDirectory\MyFile.html', compiledHTML)`
 
 ####Example
 
@@ -108,7 +108,7 @@ gulp.src('template.html', {
 For each template, calls the `templates.add` method, passing the template HTML and location
 
 ```javascript
-templates.add("<span>{{randomNumber}}</span>", "template.html");
+templates.add("template.html", "<span>{{randomNumber}}</span>");
 ```
 
 
