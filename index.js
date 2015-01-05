@@ -1,17 +1,17 @@
 /**
- * gulp-jshtml
- * @version v0.0.11
- * @link http://github.com/sw4/gulp-jshtml
+ * gulp-svg2el
+ * @version v0.0.1
+ * @link http://github.com/sw4/gulp-svg2el
  * @copyright (c)2014
- * @license MIT (http://github.com/sw4/gulp-jshtml/raw/master/LICENSE-MIT.md)
+ * @license MIT (http://github.com/sw4/gulp-svg2el/raw/master/LICENSE-MIT.md)
  */
 var through = require('through2'),
     gutil = require('gulp-util'),
     path = require('path'),
     PluginError = gutil.PluginError;
-const PLUGIN_NAME = 'gulp-jshtml';
+const PLUGIN_NAME = 'gulp-svg2el';
 
-function gulpJshtml(options) {
+function gulpSvg2el(options) {
     options = options || {};
     return through.obj(function(file, enc, callback) {
         if (file.isNull() || file.isDirectory()) {
@@ -20,12 +20,12 @@ function gulpJshtml(options) {
         }
         if (file.isStream()) {
             this.emit('error', new PluginError({
-                plugin: 'JSHTML',
+                plugin: 'svg2el',
                 message: 'Streams are not supported.'
             }));
             return callback();
         }
-        options.invoke = options.invoke || 'jshtml';
+        options.invoke = options.invoke || 'svg2el';
         if (file.isBuffer()) {
             var stream = String(file.contents),
                 location = "'" + file.path.replace(/\\/g, "/") + "'",
@@ -37,11 +37,11 @@ function gulpJshtml(options) {
             return callback();
         } else {
             this.emit('error', new PluginError({
-                plugin: 'JSHTML',
+                plugin: 'svg2el',
                 message: 'The passed file cannot be compiled.'
             }));
             return callback();
         }
     });
 }
-module.exports = gulpJshtml;
+module.exports = gulpSvg2el;
