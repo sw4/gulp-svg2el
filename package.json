@@ -1,7 +1,7 @@
 {
   "name": "gulp-svg2el",
   "description": "Extract SVG DOM element from SVG image file",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "http://github.com/sw4/gulp-svg2el",
   "repository": "git://github.com/sw4/gulp-svg2el.git",
   "author": "SW4",
